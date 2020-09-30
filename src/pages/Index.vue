@@ -1,6 +1,8 @@
 <template>
   <div class="bg-white">
-    <TopProjectsBar style="position:fixed; top: 0; left: 0" @changeTab="changeTab($event)" title="AKTİF PROJELER"></TopProjectsBar>
+    <TopProjectsBar
+      style="position:sticky; top: 0; left: 0"
+      @changeTab="changeTab($event)" title="AKTİF PROJELER"></TopProjectsBar>
     <div class="proje list-container"
          style="height: 90vh; overflow: hidden; display: flex; align-items: center; justify-content: center"
          v-if="(showCompleted === 'completed' && completedProjects.length === 0) || (showCompleted !== 'completed' && uncompletedProjects.length === 0)">
@@ -153,6 +155,6 @@
     font-size: 12px;
   }
   .scroll-pad{
-    padding-top: 8rem;
+    padding-top: 1.2em;
   }
 </style>

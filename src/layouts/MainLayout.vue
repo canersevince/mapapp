@@ -1,8 +1,8 @@
 <template>
-  <q-layout class="main bg-gray full-width" view="lHh Lpr lFf">
+  <q-layout class="main bg-gray full-width" :class="{iosLayout : $q.platform.is.ios }" view="lHh Lpr lFf">
     <div class="content full-width">
       <q-page-container class="full-width">
-        <q-scroll-area :visible="false" class="custom_scroll_area">
+        <q-scroll-area :visible="false" class="custom_scroll_area" :class="{iosScrollArea : $q.platform.is.ios}">
           <router-view :scrollProp="scrollDirection"></router-view>
         </q-scroll-area>
       </q-page-container>
@@ -102,5 +102,12 @@
     justify-content: center;
     width: 24px;
     height: auto;
+  }
+  .iosLayout{
+    margin-top: 1.2em;
+  }
+  .iosScrollArea{
+    height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
   }
 </style>
