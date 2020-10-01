@@ -129,8 +129,8 @@ module.exports = configure(function (ctx) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'belediyemap',
-        short_name: 'belediyemap',
+        name: 'org.hayal.belediye.app',
+        short_name: 'org.hayal.belediye.app',
         description: 'A Quasar Framework app',
         display: 'standalone',
         orientation: 'portrait',
