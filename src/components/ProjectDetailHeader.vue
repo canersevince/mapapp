@@ -12,10 +12,36 @@
         <q-btn-group style="margin-top: 1em" rounded>
           <q-btn color="secondary" size="small">
             <q-icon name="bookmark"></q-icon>
-            <span style="margin-left: .2em">Takip Et</span></q-btn>
+            <span style="margin-left: .2em">Takip Et</span>
+          </q-btn>
+          <q-btn color="primary" size="small">
+            <q-icon name="star"></q-icon>
+            <span style="margin-left: .2em">Puanla</span>
+            <q-popup-proxy>
+              <q-banner>
+                <div class="text-center">
+                  Projeyi Puanla
+                </div>
+                <div style="margin: 0.5em 0">
+                  <q-rating
+                    :disable="rated"
+                    v-model="ratingModel"
+                    size="2em"
+                    :max="5"
+                    color="primary"
+                  />
+                </div>
+                <div class="text-center">
+                  <q-btn :disable="rated" v-close-popup color="primary" @click="rate(currentPin)">
+                    <q-icon name="send"></q-icon> Puanla!</q-btn>
+                </div>
+              </q-banner>
+            </q-popup-proxy>
+          </q-btn>
           <q-btn color="negative" size="small">
             <q-icon name="report"></q-icon>
-            <span style="margin-left: .2em">Raporla</span></q-btn>
+            <span style="margin-left: .2em">Raporla</span>
+          </q-btn>
         </q-btn-group>
       </q-card-section>
     </q-card>
@@ -25,6 +51,12 @@
 <script>
   export default {
     name: "ProjectDetailHeader",
+    data(){
+      return {
+        ratingModel: 0,
+        rated: false
+      }
+    },
     props: {
       showHeader:{
         type: Boolean,
@@ -32,6 +64,11 @@
       },
       currentPin: {
         required: false
+      }
+    },
+    methods:{
+      rate(item){
+        this.rated = true
       }
     },
     computed: {}
@@ -49,6 +86,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 9999;
   }
 
   .item-title {

@@ -15,13 +15,13 @@
       >
         <q-route-tab exact icon="construction" label="" name="construction" to="/"/>
         <q-route-tab exact icon="map" label="" name="map" to="/Map"/>
-        <q-route-tab exact icon="speaker_notes" label="" name="speaker_notes" to="/"/>
+        <q-route-tab exact icon="event" label="" name="event" to="/Events"/>
         <q-route-tab exact icon="bookmark" label="" name="bookmark" to="/"/>
         <q-route-tab exact icon="login" label="" name="person" to="/Login" v-if="!auth"/>
         <q-route-tab exact icon="person" label="" name="person" to="/" v-if="auth"/>
         <q-btn-dropdown auto-close class="dropdown_custom" flat label="..." stretch>
           <q-list>
-            <q-item @click="tab = 'More'" clickable v-for="a in 5">
+            <q-item @click="tab = 'More'" clickable v-for="(a, i) in 5" :key="i">
               <q-avatar class="custom-q-avatar">
                 <q-icon name="settings" size="16px"></q-icon>
               </q-avatar>
@@ -92,8 +92,8 @@
   }
 
   .custom_scroll_area {
-    height: calc(100vh - 50px);
-    max-height: calc(100vh - 50px);
+    height: calc(100vh - 48px);
+    max-height: calc(100vh - 48px);
   }
 
   .custom-q-avatar {
@@ -104,10 +104,10 @@
     height: auto;
   }
   .iosLayout{
-    margin-top: 1.2em;
+
   }
   .iosScrollArea{
-    height: calc(100vh - 70px);
-    max-height: calc(100vh - 70px);
+    height: calc(100vh - 50px);
+    max-height: calc(100vh - 50px);
   }
 </style>

@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 import mapModule from './modules/map'
 import authModule from "src/store/modules/auth";
 import miscModule from "src/store/modules/misc";
+import eventModule from "src/store/modules/events";
+
 // import example from './module-example';
 // import { ExampleStateInterface } from './module-example/state';
 
@@ -23,7 +25,8 @@ export default store(function ({ Vue }) {
     modules: {
       mapModule,
       authModule,
-      miscModule
+      miscModule,
+      eventModule
     },
     // enable strict mode (adds overhead!)
     // for dev mode only

@@ -23,7 +23,7 @@
               <div>
                 <img @click="alert('img')" :src="item.IMAGE" alt="" style="max-width: 100%; height: auto">
               </div>
-              <p style="margin: 6px 0">{{item.DESCRIPTION}}</p>
+              <p style="margin: 6px 0">{{ item.DESCRIPTION }}</p>
               <a style="text-decoration: underline">Detaylar...</a>
             </div>
           </q-timeline-entry>
@@ -34,56 +34,60 @@
 </template>
 
 <script>
-  import ProjectDetailHeader from "../../components/ProjectDetailHeader";
-  import TopBar from "../../components/TopBar";
-  export default {
-    name: "pin_id",
-    components: {TopBar, ProjectDetailHeader},
-    data(){
-      return{
-        showHeader: true,
-        distanceFromTop: 0
-      }
+import ProjectDetailHeader from "../../components/ProjectDetailHeader";
+import TopBar from "../../components/TopBar";
+
+export default {
+  name: "pin_id",
+  components: {TopBar, ProjectDetailHeader},
+  data() {
+    return {
+      showHeader: true,
+      distanceFromTop: 0
+    }
+  },
+  methods: {
+    alert(i) {
+      alert(i)
     },
-    methods:{
-      alert(i){
-        alert(i)
-      },
-      scrollHandler(e){
-        if(e.position > 150){
-          if(this.showHeader){
-            this.showHeader = false
-          }
-        } else {
-          if(!this.showHeader){
-            this.showHeader = true
-          }
+    scrollHandler(e) {
+      if (e.position > 150) {
+        if (this.showHeader) {
+          this.showHeader = false
         }
-        this.distanceFromTop = e.position
+      } else {
+        if (!this.showHeader) {
+          this.showHeader = true
+        }
       }
-    },
-    computed: {
-      currentPin() {
-        const pins = this.$store.getters['mapModule/getPins']
-        return pins.find(pin => {
-          return pin._id === this.$route.params.id
-        })
-      }
+      this.distanceFromTop = e.position
+    }
+  },
+  computed: {
+    currentPin() {
+      const pins = this.$store.getters['mapModule/getPins']
+      return pins.find(pin => {
+        return pin._id === this.$route.params.id
+      })
     }
   }
+}
 </script>
 
 <style scoped>
-.timeline-container{
+.timeline-container {
   padding: 1em 1.5em;
 }
-  .scroll-area{
-    height: calc(60vh - 92px);
-  }
-.scroll-area-extend{
-  height: calc(100vh - 92px);
+
+.scroll-area {
+  height: calc(60vh - 48px);
 }
-  .extend-scroll{
-    padding-top: 247px;
-  }
+
+.scroll-area-extend {
+  height: calc(100vh - 48px);
+}
+
+.extend-scroll {
+  padding-top: 247px;
+}
 </style>

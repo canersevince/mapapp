@@ -1,6 +1,8 @@
 <template>
   <div class="bg-white">
     <TopProjectsBar
+      :show-form="true"
+      :tabs="tabs"
       style="position:sticky; top: 0; left: 0"
       @changeTab="changeTab($event)" title="AKTİF PROJELER"></TopProjectsBar>
     <div class="proje list-container"
@@ -52,6 +54,20 @@
 
     data() {
       return {
+        tabs:[
+          {
+            label: 'Devam Edenler',
+            name: 'uncompleted',
+            icon: 'settings',
+            class: 'text-primary'
+          },
+          {
+            label: 'Tamamlananlar',
+            name: 'completed',
+            icon: 'check',
+            class: 'text-green'
+          }
+        ],
         lastScrollTop: null,
         showCompleted: false,
         error: "",

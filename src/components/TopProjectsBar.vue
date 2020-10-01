@@ -8,10 +8,10 @@
       class="bg-white text-white  full-width full-height"
       style="padding: 4px 0"
     >
-      <q-tab class="text-primary" name="uncompleted" icon="construction" label="Devam Edenler"/>
-      <q-tab class="text-green" name="completed" icon="check" label="Tamamlananlar"/>
+      <q-tab v-for="tab in tabs" :class="tab.class" :name="tab.name" :icon="tab.icon" :label="tab.label"/>
     </q-tabs>
     <q-form
+      v-if="showForm"
       style="transition: 200ms ease-in-out;
         z-index: 9999;
         padding : 1em 2.5em;
@@ -45,6 +45,8 @@ export default {
   props: {
     link: String,
     title: String,
+    tabs: Array,
+    showForm: Boolean
   },
   data() {
     return {
