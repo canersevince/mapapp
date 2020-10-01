@@ -9,20 +9,62 @@ export interface MapStateInterface {
 const state: MapStateInterface = {
   pins: [
     {
-      _id: "r21f21",
+      _id: "1",
       CONTENT: "Example.",
       CREATED: new Date(),
       LAT_LNG: latLng(40.99226800, 29.0284900),
       CREATOR: "Caner Sevince",
       ADDRESS: "Kıvanç Sk.",
       DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL:"https://www.artkolik.net/wp-content/uploads/2018/12/davut.jpg",
+      STEPS: [
+        {
+          _id: "1",
+          CONTENT: "",
+          CREATED: new Date(),
+          CREATOR: "Caner Sevince",
+          DESCRIPTION: "Bu bir proje adımıdır.",
+          ICON: "construction",
+          IMAGE: 'https://static.daktilo.com/sites/80/uploads/2020/04/20/attachment-19921-1-dac32a19cc1790e5a6f274f565c151ad-1587371515.jpeg',
+          TITLE: "Projenin İlk Adımı"
+        },
+        {
+          _id: "2",
+          CONTENT: "",
+          CREATED: new Date(),
+          CREATOR: "Caner Sevince",
+          DESCRIPTION: "Bu bir proje adımıdır.",
+          ICON: "settings",
+          IMAGE: 'https://static.daktilo.com/sites/80/uploads/2020/04/20/attachment-19921-1-dac32a19cc1790e5a6f274f565c151ad-1587371515.jpeg',
+          TITLE: "Projenin İkinci Adımı"
+        },
+        {
+          _id: "3",
+          CONTENT: "",
+          CREATED: new Date(),
+          CREATOR: "Caner Sevince",
+          DESCRIPTION: "Bu bir proje adımıdır.",
+          ICON: "settings",
+          IMAGE: 'https://static.daktilo.com/sites/80/uploads/2020/04/20/attachment-19921-1-dac32a19cc1790e5a6f274f565c151ad-1587371515.jpeg',
+          TITLE: "Projenin Üçüncü Adımı"
+        },
+        {
+          _id: "4",
+          CONTENT: "",
+          CREATED: new Date(),
+          CREATOR: "Caner Sevince",
+          DESCRIPTION: "Bu bir proje adımıdır.",
+          ICON: "settings",
+          IMAGE: 'https://static.daktilo.com/sites/80/uploads/2020/04/20/attachment-19921-1-dac32a19cc1790e5a6f274f565c151ad-1587371515.jpeg',
+          TITLE: "Projenin Dördüncü Adımı"
+        }
+      ],
+      THUMBNAIL: "https://www.artkolik.net/wp-content/uploads/2018/12/davut.jpg",
       TITLE: "Heykel Projesi",
       IS_DONE: false
-    }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
+    },
+    {
+      _id: "2",
+      CONTENT: "Example 2.",
       CREATED: new Date(),
       LAT_LNG: latLng(40.987590, 29.025149),
       CREATOR: "Caner Sevince",
@@ -32,187 +74,7 @@ const state: MapStateInterface = {
       THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
       TITLE: "Altyapı Çalışması",
       IS_DONE: false
-      }, {
-      _id: "r2132c",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Örnek Cad. Örnek Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek Bina Restorasyonu",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Yol Bakımı ve Onarımı",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.021149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987590, 29.022149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987520, 29.023149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987990, 29.024149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987890, 29.027149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Örnek Son",
-      IS_DONE: false
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987790, 29.026149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Tamamlanmış örnek proje",
-      IS_DONE: true
-      }, {
-      _id: "r21f221",
-      CONTENT: "Example.",
-      CREATED: new Date(),
-      LAT_LNG: latLng(40.987690, 29.025149),
-      CREATOR: "Caner Sevince",
-      ADDRESS: "Moda Cad. Zuhal Sk.",
-      DESCRIPTION: "Bu bir örnek projedir.",
-      STEPS: [],
-      THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
-      TITLE: "Tamamlanmış proje",
-      IS_DONE: true
-      }
+    },
   ]
 };
 

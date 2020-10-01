@@ -40,7 +40,7 @@
           <q-separator/>
 
           <q-card-actions align="right">
-            <q-btn color="white" class="bg-primary" flat label="Detaylar" v-close-popup/>
+            <q-btn @click="$router.push(`/Pin/${active._id}`)" color="white" class="bg-primary" flat label="Detaylar" v-close-popup/>
             <q-btn color="primary" flat icon="add_box" round v-close-popup/>
           </q-card-actions>
         </q-card>

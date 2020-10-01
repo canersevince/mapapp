@@ -1,3 +1,4 @@
+import {Step} from "src/models/step";
 
 export class Pin {
   _id!: string;
@@ -7,7 +8,7 @@ export class Pin {
   CONTENT!:string;
   LAT_LNG: any;
   ADDRESS!:string;
-  STEPS!:[];
+  STEPS!:Step[];
   CREATOR!:string;
   CREATED!: Date;
   IS_DONE!:boolean

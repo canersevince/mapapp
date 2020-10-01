@@ -78,7 +78,7 @@
       },
       projectClick(id){
         setTimeout(() => {
-          alert('Tıklanan item id: ' + id)
+        this.$router.push(`/Pin/${id}`)
         }, 500)
       },
       cameraSuccess(data) {
