@@ -51,9 +51,13 @@
       },
       scrollHandler(e){
         if(e.position > 150){
-          this.showHeader = false
+          if(this.showHeader){
+            this.showHeader = false
+          }
         } else {
-          this.showHeader = true
+          if(!this.showHeader){
+            this.showHeader = true
+          }
         }
         this.distanceFromTop = e.position
       }
@@ -80,6 +84,6 @@
   height: calc(100vh - 92px);
 }
   .extend-scroll{
-    padding-top: 92px;
+    padding-top: 247px;
   }
 </style>

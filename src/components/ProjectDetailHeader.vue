@@ -40,7 +40,7 @@
 
 <style scoped>
   .header-main{
-    transition: transform 200ms ease-in-out, height 500ms ease-in-out, opacity 200ms;
+    transition: transform 500ms ease-in-out, height 1000ms ease-in-out, opacity 1000ms;
   }
   .detailHeader {
     width: 100%;
@@ -59,11 +59,12 @@
     margin: .5em 0;
   }
   .hideHeader{
-    transform: translateY(-150%);
+    transform: translateY(-100%);
     pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
   }
 </style>
