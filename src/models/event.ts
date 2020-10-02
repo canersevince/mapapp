@@ -13,4 +13,5 @@ export class Event {
   CREATOR!:string
   FREE!:boolean
   TICKET_LINKS!:string[]
+  PHOTOS!: any[]
 }

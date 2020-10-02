@@ -21,7 +21,8 @@ const state: EventStateInterface = {
       THUMBNAIL: "https://image.freepik.com/free-vector/music-event-banner-design-template-festival-concert-party_85212-64.jpg",
       TITLE: "Örnek Konser Etkinliği",
       FREE: false,
-      TICKET_LINKS:[]
+      TICKET_LINKS:[],
+      PHOTOS: [{SRC: "https://i.pinimg.com/originals/a4/74/a9/a474a9adfd14f90c8a4cb5aca6067efb.jpg", ALT: "Etkinlik Foto"}, {SRC: "https://www.yee.org.tr/sites/default/files/galeri/img_7185_0.jpg", ALT: "Etkinlik Foto"}]
     },
     {
       _id: "2",
@@ -37,7 +38,8 @@ const state: EventStateInterface = {
       THUMBNAIL: "https://image.freepik.com/free-vector/music-event-banner-design-template-festival-concert-party_85212-64.jpg",
       TITLE: "Örnek Konser Etkinliği 2",
       FREE: true,
-      TICKET_LINKS:[]
+      TICKET_LINKS:[],
+      PHOTOS: [{SRC: "https://i.pinimg.com/originals/a4/74/a9/a474a9adfd14f90c8a4cb5aca6067efb.jpg", ALT: "Etkinlik Foto"}, {SRC: "https://www.yee.org.tr/sites/default/files/galeri/img_7185_0.jpg", ALT: "Etkinlik Foto"}]
     }
   ],
   pastEvents: []

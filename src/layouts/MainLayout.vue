@@ -16,7 +16,7 @@
         <q-route-tab exact icon="construction" label="" name="construction" to="/"/>
         <q-route-tab exact icon="map" label="" name="map" to="/Map"/>
         <q-route-tab exact icon="event" label="" name="event" to="/Events"/>
-        <q-route-tab exact icon="bookmark" label="" name="bookmark" to="/"/>
+        <q-route-tab exact icon="bookmark" label="" name="bookmark" to="/Bookmarks"/>
         <q-route-tab exact icon="login" label="" name="person" to="/Login" v-if="!auth"/>
         <q-route-tab exact icon="person" label="" name="person" to="/" v-if="auth"/>
         <q-btn-dropdown auto-close class="dropdown_custom" flat label="..." stretch>

@@ -71,8 +71,10 @@
       showPopup(e: any) {
         this.active = e;
         this.$nextTick(() => {
-          this.showPopup$ = true;
-          this.showParagraph = true
+          setTimeout(() => {
+            this.showPopup$ = true;
+            this.showParagraph = true
+          }, 100)
         })
       }
     },

@@ -10,6 +10,7 @@
           :zoom="zoom"
           @update:center="centerUpdate"
           @update:zoom="zoomUpdate"
+          :current-zoom="currentZoom"
           ref="appMap"
           style="height: 80%"
           v-if="showMap"
@@ -46,12 +47,12 @@
     data() {
       return {
         isClicked: false,
-        zoom: 13.5,
+        zoom: 12.5,
         center: latLng(40.98014100, 29.08227000),
         url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
         attribution:
           '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
-        currentZoom: 4,
+        currentZoom: 11.5,
         currentCenter: latLng(40.98014100, 29.08227000),
         showParagraph: false,
         mapOptions: {

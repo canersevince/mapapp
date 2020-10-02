@@ -8,6 +8,9 @@ const getters: GetterTree<EventStateInterface, StateInterface> = {
   },
   getPastEvents(s){
     return s.pastEvents
+  },
+  getAll(s){
+    return [...s.events, ...s.pastEvents]
   }
 }
 
