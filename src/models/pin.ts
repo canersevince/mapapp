@@ -11,5 +11,6 @@ export class Pin {
   STEPS!:Step[];
   CREATOR!:string;
   CREATED!: Date;
-  IS_DONE!:boolean
+  IS_DONE!:boolean;
+  RATING!:number | null
 }

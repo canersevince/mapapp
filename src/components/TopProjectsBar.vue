@@ -8,7 +8,7 @@
       class="bg-white text-white  full-width full-height"
       style="padding: 4px 0"
     >
-      <q-tab v-for="tab in tabs" :class="tab.class" :name="tab.name" :icon="tab.icon" :label="tab.label"/>
+      <q-tab v-for="(tab, i) in tabs" :key="i" :class="tab.class" :name="tab.name" :icon="tab.icon" :label="tab.label"/>
     </q-tabs>
     <q-form
       v-if="showForm"
@@ -88,4 +88,5 @@ export default {
 .iosTopBar {
   margin-top: 15px
 }
+
 </style>

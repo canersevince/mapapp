@@ -60,7 +60,8 @@ const state: MapStateInterface = {
       ],
       THUMBNAIL: "https://www.artkolik.net/wp-content/uploads/2018/12/davut.jpg",
       TITLE: "Restorasyon Projesi",
-      IS_DONE: false
+      IS_DONE: false,
+      RATING: null
     },
     {
       _id: "2",
@@ -114,7 +115,8 @@ const state: MapStateInterface = {
       ],
       THUMBNAIL: "https://www.diyarbakirgazete.com/wp-content/uploads/2018/08/alt-yap%C4%B1.jpg",
       TITLE: "Altyapı Çalışması",
-      IS_DONE: false
+      IS_DONE: false,
+      RATING: null
     },
   ]
 };

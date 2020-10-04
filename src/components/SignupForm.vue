@@ -18,7 +18,7 @@
         <q-input @focus="hideMenu" @focusout="showMenu" class="input-bg-white form-object"
                  outlined placeholder="Şifrenizi tekrar giriniz..." rounded v-model="passwordConfirm"></q-input>
         <q-toggle class="form-object" label="Kullanım şartlarını kabul ediyorum" v-model="accept"/>
-        <p class="muted-text form-object"><span @click="showLogin">Zaten Üyeyim</span> / <span @click="forgotPw">Şifremi Unuttum</span></p>
+        <p class="muted-text form-object"><span @click="showLogin">Giriş Yap</span> / <span @click="forgotPw">Şifremi Unuttum</span></p>
         <div class="form-object">
           <q-btn color="dark" label="GİRİŞ YAP" padding=".5em 3em" rounded type="submit"/>
         </div>

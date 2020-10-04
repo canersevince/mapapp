@@ -1,6 +1,6 @@
 <template>
     <div class="content-center form-container">
-      <TopBar title="OTURUM AÇ" link="'/'"></TopBar>
+      <TopBar title="OTURUM AÇ" link="/"></TopBar>
       <Component
         @forgotPw="activeComponent='ForgotPassword'"
         @showLogin="activeComponent = 'LoginForm'"

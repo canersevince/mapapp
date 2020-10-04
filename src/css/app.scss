@@ -21,10 +21,9 @@ body.mobile .q-tabs__content {
   border: 1px solid rgba(#313133, 0.5) !important;
   transition: border-color 0.36s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.q-field__control, .q-field__marginal {
-  height: 44px;
+.q-field__label{
+  font-size: 14px;
 }
-
 .pb72{
   padding-bottom: 72px;
 }
@@ -49,4 +48,34 @@ body.mobile .q-tabs__content {
 }
 .scrollable::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
+}
+
+
+.custom-popup-proxy, .q-dialog{
+  z-index: 99999;
+}
+
+.body--dark .bg-white,
+.body--dark .detailHeader,
+.body--dark .topbar,
+.body--dark .bg-gray,{
+  background-color: transparent!important;
+}
+.body--dark .input-bg-white .q-field__control.relative-position.row.no-wrap, {
+  background-color: #222!important;
+}
+
+.body--dark .input-bg-white .q-field__control.relative-position.row.no-wrap, .body--dark .q-field__control.relative-position.row.no-wrap{
+  background-color: #222!important;
+}
+
+.body--dark * {
+  color: white!important;
+}
+
+.body--dark .leaflet-tooltip *{
+  color: black!important;
+}
+.body--dark .leaflet-control-zoom *{
+  color: black!important;
 }

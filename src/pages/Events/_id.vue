@@ -22,7 +22,7 @@
         transition-prev="scale"
         v-model="slide"
       >
-        <q-carousel-slide v-for="(photo, i) in currentEvent.PHOTOS" :name="i" :img-src="photo.SRC" />
+        <q-carousel-slide v-for="(photo, i) in currentEvent.PHOTOS" :name="i" :key="i" :img-src="photo.SRC" />
       </q-carousel>
     </q-scroll-area>
   </div>

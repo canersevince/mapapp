@@ -2,7 +2,7 @@
   <q-layout class="main bg-gray full-width" :class="{iosLayout : $q.platform.is.ios }" view="lHh Lpr lFf">
     <div class="content full-width">
       <q-page-container class="full-width">
-        <q-scroll-area :visible="false" class="custom_scroll_area" :class="{iosScrollArea : $q.platform.is.ios}">
+        <q-scroll-area :visible="false" class="custom_scroll_area" :class="{iosScrollArea : $q.platform.is.ios, navHidden: !isMenuActive}">
           <router-view :scrollProp="scrollDirection"></router-view>
         </q-scroll-area>
       </q-page-container>
@@ -21,11 +21,53 @@
         <q-route-tab exact icon="person" label="" name="person" to="/" v-if="auth"/>
         <q-btn-dropdown auto-close class="dropdown_custom" flat label="..." stretch>
           <q-list>
-            <q-item @click="tab = 'More'" clickable v-for="(a, i) in 5" :key="i">
+            <q-item @click="tab = 'More0'" clickable>
               <q-avatar class="custom-q-avatar">
                 <q-icon name="settings" size="16px"></q-icon>
               </q-avatar>
-              <q-item-section>Submenu Text Here</q-item-section>
+              <q-item-section>E-Belediye</q-item-section>
+            </q-item>
+            <q-item @click="tab = 'More2'" clickable>
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="settings" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>E-İmar</q-item-section>
+            </q-item>
+            <q-item @click="navigator('More1', '/Reports')" clickable>
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="settings" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>Şikayet Merkezi</q-item-section>
+            </q-item>
+            <q-item @click="tab = 'More3'" clickable>
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="settings" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>İlçemizi Tanıyalım</q-item-section>
+            </q-item>
+            <q-item @click="tab = 'More4'" clickable>
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="settings" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>Eğitim Merkezi</q-item-section>
+            </q-item>
+            <q-item @click="tab = 'More4'" clickable>
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="settings" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>İstihdam Merkezi</q-item-section>
+            </q-item>
+            <q-item @click="darkMode(true)" clickable v-if="!isDark">
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="nights_stay" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>Karanlık Modu</q-item-section>
+            </q-item>
+            <q-item @click="darkMode(false)" clickable v-else>
+              <q-avatar class="custom-q-avatar">
+                <q-icon name="wb_incandescent" size="16px"></q-icon>
+              </q-avatar>
+              <q-item-section>Aydınlık Modu</q-item-section>
             </q-item>
           </q-list>
         </q-btn-dropdown>
@@ -49,16 +91,27 @@
       },
       isMenuActive() {
         return this.$store.getters['miscModule/getMenuState']
+      },
+      isDark(){
+        return this.$q.dark.isActive
       }
     },
     methods: {
+      navigator(tab, path){
+        this.tab = tab
+        this.$router.push(path)
+      },
+      darkMode(v){
+        console.log(v)
+        this.$q.dark.set(v)
+      }
     },
     mounted() {
     }
   }
 </script>
 
-<style>
+<style lang="scss">
   .main {
     display: flex;
     align-items: center;
@@ -79,6 +132,9 @@
     pointer-events: none;
     z-index: -1;
     height: 0 !important;
+    div[role='tablist'] {
+      height: 0;
+    }
   }
 
   .dropdown_custom .q-btn__wrapper {
@@ -109,5 +165,9 @@
   .iosScrollArea{
     height: calc(100vh - 50px);
     max-height: calc(100vh - 50px);
+  }
+  .navHidden{
+    height: 100vh;
+    max-height: 100vh;
   }
 </style>
