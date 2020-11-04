@@ -1,6 +1,6 @@
-# belediyemap (belediye)
+# Projet Map App
 
-A Quasar Framework app
+This is a Quasar Framework mobile app prototype that shows the government projects, public events around you and notifies. Also you can report any issue to your city hall / city government by taking photo of it.
 
 ## Install the dependencies
 ```bash
