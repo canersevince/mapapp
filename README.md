@@ -1,4 +1,4 @@
-# Projet Map App
+# Project Map App (front end prototype)
 
 This is a Quasar Framework mobile app prototype that shows the government projects, public events around you and notifies. Also you can report any issue to your city hall / city government by taking photo of it.
 
